@@ -1,0 +1,325 @@
+/* =========================================================================
+   MEGA PRESS — Design Tokens
+   Import once at the root of any prototype using this design system.
+   ========================================================================= */
+
+/* ---- Fonts (Google) ---------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap');
+/* Pretendard fallback CDN (Google Fonts hosts it now, but keep this as a hedge) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+  /* ----- Color: brand --------------------------------------------------- */
+  --navy-700: #1e3a8a;   /* primary */
+  --navy-800: #1e40af;   /* primary hover */
+  --navy-900: #172554;   /* primary deep / accent on dark */
+  --accent:        #f97316;   /* orange — single accent */
+  --accent-deep:   #ea580c;   /* orange pressed / dark-bg variant */
+  --accent-soft:   #fed7aa;   /* tint, rarely used (eyebrow on light only) */
+
+  /* ----- Color: neutrals ------------------------------------------------ */
+  --slate-950: #0f172a;
+  --slate-900: #1e293b;
+  --slate-800: #334155;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-300: #cbd5e1;
+
+  --bone-50:   #fafaf9;
+  --bone-100:  #f5f5f4;
+  --bone-200:  #e7e5e4;
+  --bone-300:  #d6d3d1;
+
+  /* ----- Semantic: single white theme ----------------------------------- */
+  --bg:        #ffffff;
+  --bg-raised: #f7f7f7;
+  --fg-1:      #000000;            /* primary text */
+  --fg-2:      #4a4a4a;            /* secondary text */
+  --fg-3:      #8a8a8a;            /* tertiary / disabled */
+  --line:      rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.16);
+  --primary:   var(--navy-700);
+  --primary-hover: var(--navy-800);
+  --on-primary: #ffffff;
+
+  /* ----- Type families -------------------------------------------------- */
+  /* Headlines: editorial serif for English, Pretendard ExtraBold for Korean.
+     The display family falls back through Pretendard so mixed-language
+     headlines render coherently. */
+  --font-body:    'Pretendard', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: var(--font-body);
+  --font-kr:      var(--font-body);
+  --font-en:      var(--font-body);
+  --font-mono:    var(--font-body)
+
+  /* ----- Type scale ----------------------------------------------------- */
+  --text-eyebrow:   0.75rem;   /* 12 */
+  --text-caption:   0.8125rem; /* 13 */
+  --text-body:      1rem;      /* 16 */
+  --text-body-lg:   1.125rem;  /* 18 */
+  --text-h4:        1.25rem;   /* 20 */
+  --text-h3:        1.75rem;   /* 28 */
+  --text-h2:        3.5rem;    /* 56 */
+  --text-h1:        clamp(3.5rem, 7vw, 6.5rem);    /* 56 → 104 */
+  --text-stat:      clamp(2.5rem, 4vw, 4rem);      /* 40 → 64 */
+  --text-stat-xl:   clamp(4rem, 8vw, 7.5rem);      /* 64 → 120 */
+
+  --leading-tight:  1.05;
+  --leading-snug:   1.2;
+  --leading-normal: 1.7;   /* body — generous, editorial */
+  --leading-loose:  1.85;
+
+  --tracking-wide:  0.16em;
+  --tracking-tight: -0.02em;
+  --tracking-display: -0.02em;   /* headlines: slightly tight, not crushed */
+
+  /* ----- Spacing (8pt) -------------------------------------------------- */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* ----- Radii ---------------------------------------------------------- */
+  --radius-sm:   6px;
+  --radius-md:   12px;   /* cards, inputs */
+  --radius-lg:   16px;   /* images */
+  --radius-xl:   24px;
+  --radius-pill: 999px;
+
+  /* ----- Shadows -------------------------------------------------------- */
+  --shadow-1: 0 1px 0 rgba(15, 23, 42, 0.04);
+  --shadow-2: 0 8px 24px -12px rgba(15, 23, 42, 0.18);
+  --shadow-3: 0 24px 60px -24px rgba(15, 23, 42, 0.35);
+
+  /* ----- Motion --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:   150ms;
+  --dur-base:   200ms;
+  --dur-slow:   600ms;
+
+  /* ----- Layout --------------------------------------------------------- */
+  --content-max: 1280px;
+  --gutter:      var(--space-8);
+}
+
+/* Dark surface override removed — site is single-theme (white). Legacy
+   [data-theme="dark"] markup falls through to the default light tokens. */
+
+/* =========================================================================
+   Semantic element styles
+   ========================================================================= */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--fg-1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* Headlines: editorial serif by default. Mark KR-only headlines with .kr-display
+   to switch the family to Pretendard ExtraBold. Use <em> for the orange accent
+   word inside any headline. */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 800;
+  font-style: normal;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  font-variation-settings: normal;
+  color: inherit;
+  margin: 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 800;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  font-variation-settings: normal;
+  color: inherit;
+  margin: 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  font-variation-settings: normal;
+  color: inherit;
+  margin: 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-display);
+  margin: 0;
+}
+
+/* Korean-only headlines switch to Pretendard ExtraBold */
+.kr-display, .kr-display h1, .kr-display h2, .kr-display h3, .kr-display h4,
+h1.kr-display, h2.kr-display, h3.kr-display, h4.kr-display {
+  font-family: var(--font-kr);
+  font-weight: 800;
+  letter-spacing: var(--tracking-display);
+  font-variation-settings: normal;
+}
+
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--fg-2);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1.7;
+  color: var(--fg-2);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+.accent { color: var(--accent); }
+.muted  { color: var(--fg-2); }
+
+.stat {
+  font-family: var(--font-body);
+  font-size: var(--text-stat);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-1);
+}
+.stat-xl { font-size: var(--text-stat-xl); }
+.stat .unit { color: var(--accent); }
+
+/* ---- Pill tag --------------------------------------------------------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  font-size: var(--text-caption);
+  color: var(--fg-1);
+}
+.pill::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+/* ---- Buttons ---------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: var(--text-body);
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-ghost {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--fg-1);
+}
+.btn-arrow {
+  background: transparent;
+  border: 0;
+  color: var(--fg-1);
+  padding: 0;
+}
+.btn-arrow .arrow {
+  display: inline-block;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.btn-arrow:hover .arrow { transform: translateX(4px); }
+
+/* ---- Section + container --------------------------------------------- */
+.section {
+  padding: var(--space-32) 0;
+}
+.container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---- Section index rail (left dotted) -------------------------------- */
+.section-index {
+  position: fixed;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  z-index: 30;
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: var(--tracking-wide);
+}
+.section-index a {
+  display: flex; align-items: center; gap: var(--space-2);
+  color: var(--fg-2);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.section-index a::before {
+  content: "";
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.5;
+}
+.section-index a.is-active {
+  opacity: 1;
+  color: var(--accent);
+}
+.section-index a.is-active::before { opacity: 1; }
+@media (max-width: 1023px) { .section-index { display: none; } }

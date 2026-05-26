@@ -1,0 +1,30 @@
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# 에디터 설정 (개인용)
+.vscode/
+.idea/
+
+# image-slot 런타임 sidecar (호스트 omelette 환경 전용)
+.image-slots.state.json
+
+# 분석/변환용 임시 스크립트와 결과물 (밑줄 prefix 컨벤션)
+_*.py
+_*.png
+_*.jpg
+_*.jpeg
+_*.pdf
+_*.html
+
+# Claude Code workspace
+.claude/
+
+# 빌드/캐시
+node_modules/
+dist/
+build/
+.cache/
