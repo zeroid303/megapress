@@ -1,6 +1,7 @@
-// Facilities.jsx — placeholder section for equipment & awards/certifications.
-// Layout-only: content comes later. Keep markup ready so we can drop real
-// equipment specs and award entries in without rewiring the section.
+// Facilities.jsx — equipment list + awards/certifications.
+// Equipment: category sections, each with a blurb and an equipment list.
+// Awards remain placeholder cards until real entries land.
+// All copy lives in i18n's `facilities`.
 function Facilities({ lang }) {
   const t = window.MP_I18N[lang].facilities;
   const krCls = lang === "ko" ? "kr-display" : "";
@@ -12,14 +13,28 @@ function Facilities({ lang }) {
 
         <div className="fac-block">
           <div className="fac-block-label">{t.equipmentLabel}</div>
-          <div className="fac-equip-grid">
-            {t.equipmentPlaceholders.map((e, i) => (
-              <div className="fac-equip-card" key={i}>
-                <div className="fac-equip-thumb" aria-hidden="true">
-                  <span className="fac-equip-thumb-hint">사진 추가 예정</span>
+
+          <div className="fac-cat-grid">
+            {t.equipmentCategories.map((c, i) => (
+              <div className="fac-cat" key={i}>
+                <h3 className="fac-cat-name">{c.name}</h3>
+                <div className="fac-cat-content">
+                  <p className="fac-cat-desc">{c.desc}</p>
+                  {c.groups ? (
+                    c.groups.map((g, gi) => (
+                      <div className="fac-cat-group" key={gi}>
+                        <div className="fac-cat-group-label">{g.label}</div>
+                        <ul className="fac-cat-items">
+                          {g.items.map((it, ii) => <li key={ii}>{it}</li>)}
+                        </ul>
+                      </div>
+                    ))
+                  ) : (
+                    <ul className="fac-cat-items">
+                      {c.items.map((it, ii) => <li key={ii}>{it}</li>)}
+                    </ul>
+                  )}
                 </div>
-                <div className="fac-equip-name">{e.name}</div>
-                <div className="fac-equip-spec">{e.spec}</div>
               </div>
             ))}
           </div>

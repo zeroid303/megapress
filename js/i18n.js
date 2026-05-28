@@ -30,7 +30,7 @@ window.MP_I18N = {
           num: "02",
           sector: "STRENGTH · 제조 역량",
           imgPlaceholder: "제조 라인 사진을 드래그",
-          title: "견적부터 납품까지, 단일 워크플로우",
+          title: "견적부터 배송까지, 단일 워크플로우",
           desc: "옵셋·디지털 인쇄부터 후가공·패키지까지 자체 공정으로 보유. 분업으로 흩어지던 인쇄 과정을 한 회사 안에서 완결합니다.",
           stats: [
             { value: "28", label: "동시 SKU" },
@@ -57,7 +57,7 @@ window.MP_I18N = {
         images: [
           { src: "assets/images/printcenter-1.jpg", position: "center top",    caption: "메가프레스 — 1996년부터, 인쇄 혁신의 중심에서",       sub: "MEGA PRESS — At the center of print innovation since 1996." },
           { src: "assets/images/printcenter-2.jpg", position: "center center", caption: "주문은 간편하게, 제작은 신속하게, 납품은 완벽하게", sub: "Order with ease. Produce at speed. Deliver in perfection." },
-          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 납품까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
+          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
         ],
       },
       affiliatesLabel: "메가프레스 계열사",
@@ -86,11 +86,40 @@ window.MP_I18N = {
       lead: "",
       equipmentLabel: "보유 설비",
       awardsLabel: "수상 · 인증",
-      equipmentPlaceholders: [
-        { name: "오프셋 인쇄기", spec: "모델 / 사양 추가 예정" },
-        { name: "디지털 인쇄기", spec: "모델 / 사양 추가 예정" },
-        { name: "후가공 라인", spec: "박·코팅·접지 라인 정보 추가 예정" },
-        { name: "패키지 라인", spec: "톰슨·합지 라인 정보 추가 예정" },
+      equipmentCategories: [
+        {
+          name: "인쇄기",
+          desc: "미쓰비시·료비·RMGT 대형 옵셋 인쇄기로 대량 고품질 상업인쇄를 담당합니다. 양면 동시 인쇄가 가능한 RMGT 8도기를 포함합니다.",
+          groups: [
+            { label: "옵셋", items: ["미쓰비시 DIAMOND D3000LS", "료비 RYOBI 1050", "료비 RYOBI 920", "료비 RYOBI 750", "RMGT 양면 8도기", "RMGT 국2절", "RMGT 1060ST(4색)", "RMGT 970PF(8색)"] },
+            { label: "마스터", items: ["료비 양면기", "료비 단면기", "마스터제판기", "디지털마스타기(*리소)"] },
+          ],
+        },
+        {
+          name: "출력기",
+          desc: "필름 공정 없이 인쇄 데이터를 인쇄판에 직접 출력하는 다이니폰 스크린 CTP 출력기로, 제판 정밀도와 생산 효율을 높입니다.",
+          items: ["다이니폰 스크린 3대"],
+        },
+        {
+          name: "재단기",
+          desc: "70×100cm급을 처리하는 세계 베스트셀러 POLAR 고속재단기를 비롯해 명함·소형 재단까지 정밀하게 처리합니다.",
+          items: ["POLAR 115 5대", "나가이 NCD-7", "독일에바재단기 551-06-LT 2대", "호리즌 PC-45", "명함재단기 자르나 5대", "대중재단기"],
+        },
+        {
+          name: "인쇄기 / 디지털",
+          desc: "소량·가변·단납기 주문을 위한 디지털 인쇄 라인. 토너 방식부터 UV 평판, 화이트 인쇄 전용기까지 다양한 매체를 소화합니다.",
+          items: ["AccurioJet 30000", "스크린 LD-6501 3대", "스크린 LD-7000", "FUJI XEROX", "KONICA MINOLTA C3080", "미놀타 C14000", "오키 디지털 화이트 명함 전용기", "리코 9500", "NOCAI UV 디지털 평판 프린터", "OKI 형광프린터"],
+        },
+        {
+          name: "디지털 후가공기",
+          desc: "디지털 인쇄물 전용 컷팅·재단·코팅 라인으로 소량 주문도 빠르게 마감합니다.",
+          items: ["디지털전용 스티커컷팅기", "디지털전용 명함재단기", "시노하라 레이저컷팅기", "소량컷팅기", "디지털인쇄 전용 코팅기"],
+        },
+        {
+          name: "후가공기",
+          desc: "중철·접착·도무송·타발·코팅 등 제본과 후가공 전반을 처리하는 설비를 갖추고 있습니다.",
+          items: ["호리존 자동중철", "카마 자동접착기", "봉투 가공기", "명함 엣지전용기", "대봉투", "E-BWO 대쟈켓", "E-PO 규격(일반편지)", "E_BP각대봉투", "E_DC 타발기", "하이텔 KHC66", "광창기계 KCG 415", "아사히 자동도무송기", "정합기 AC-8000", "코팅기", "오시/미싱", "실린더", "플라톤", "귀도리기", "카드펀칭기", "Ms-72A", "명함전용 박기기"],
+        },
       ],
       awardsPlaceholders: [
         { title: "수상 내역", body: "수상 이력이 들어갈 자리입니다." },
@@ -368,7 +397,7 @@ window.MP_I18N = {
         images: [
           { src: "assets/images/printcenter-1.jpg", position: "center top",    caption: "메가프레스 — 1996년부터, 인쇄 혁신의 중심에서",       sub: "MEGA PRESS — At the center of print innovation since 1996." },
           { src: "assets/images/printcenter-2.jpg", position: "center center", caption: "주문은 간편하게, 제작은 신속하게, 납품은 완벽하게", sub: "Order with ease. Produce at speed. Deliver in perfection." },
-          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 납품까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
+          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
         ],
       },
       affiliatesLabel: "Our affiliated brands",
@@ -397,11 +426,40 @@ window.MP_I18N = {
       lead: "",
       equipmentLabel: "Equipment",
       awardsLabel: "Awards · Certifications",
-      equipmentPlaceholders: [
-        { name: "Offset press", spec: "Model / spec — TBD" },
-        { name: "Digital press", spec: "Model / spec — TBD" },
-        { name: "Finishing line", spec: "Foil · coating · folding — TBD" },
-        { name: "Packaging line", spec: "Die-cut · lamination — TBD" },
+      equipmentCategories: [
+        {
+          name: "Presses",
+          desc: "Large-format Mitsubishi, Ryobi and RMGT offset presses handle high-volume, high-quality commercial printing — including an RMGT 8-color perfector for simultaneous double-sided printing.",
+          groups: [
+            { label: "Offset", items: ["Mitsubishi DIAMOND D3000LS", "Ryobi RYOBI 1050", "Ryobi RYOBI 920", "Ryobi RYOBI 750", "RMGT 8-color perfector", "RMGT 2-up (B2)", "RMGT 1060ST (4-color)", "RMGT 970PF (8-color)"] },
+            { label: "Master", items: ["Ryobi perfector", "Ryobi single-sided", "Master plate maker", "Digital master maker (Riso)"] },
+          ],
+        },
+        {
+          name: "Prepress / output",
+          desc: "Dainippon Screen CTP (computer-to-plate) units image print data straight onto plates with no film step, improving plate accuracy and throughput.",
+          items: ["Dainippon Screen ×3"],
+        },
+        {
+          name: "Cutters",
+          desc: "World-bestselling POLAR high-speed cutters handling 70×100 cm stock, plus dedicated business-card and small-format cutters for precise trimming.",
+          items: ["POLAR 115 ×5", "Nagai NCD-7", "German Eva cutter 551-06-LT ×2", "Horizon PC-45", "Business-card cutter (Jaruna) ×5", "Daejung cutter"],
+        },
+        {
+          name: "Digital presses",
+          desc: "A digital print line for short-run, variable-data and quick-turnaround jobs — from toner devices to UV flatbed and dedicated white-ink printers, covering a wide range of media.",
+          items: ["AccurioJet 30000", "Screen LD-6501 ×3", "Screen LD-7000", "FUJI XEROX", "KONICA MINOLTA C3080", "Minolta C14000", "OKI digital white business-card printer", "Ricoh 9500", "NOCAI UV digital flatbed printer", "OKI fluorescent printer"],
+        },
+        {
+          name: "Digital finishing",
+          desc: "Cutting, trimming and coating lines dedicated to digitally printed output, finishing even small orders quickly.",
+          items: ["Digital sticker cutter", "Digital business-card cutter", "Shinohara laser cutter", "Small-lot cutter", "Coating machine for digital prints"],
+        },
+        {
+          name: "Finishing",
+          desc: "Equipment covering the full range of binding and finishing — saddle-stitching, gluing, die-cutting, punching and coating.",
+          items: ["Horizon auto saddle-stitcher", "Kama auto gluer", "Envelope processor", "Business-card edge machine", "Large envelope unit", "E-BWO large jacket", "E-PO standard (letter)", "E_BP gusset envelope", "E_DC die-cutter", "Hightel KHC66", "Gwangchang KCG 415", "Asahi auto die-cutter", "Collator AC-8000", "Coating machine", "Scoring / perforating", "Cylinder", "Platen", "Corner rounder", "Card punch", "Ms-72A", "Business-card foil stamper"],
+        },
       ],
       awardsPlaceholders: [
         { title: "Awards", body: "Award history goes here." },
