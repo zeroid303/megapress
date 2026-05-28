@@ -16,6 +16,7 @@
   --accent:        #f97316;   /* orange — single accent */
   --accent-deep:   #ea580c;   /* orange pressed / dark-bg variant */
   --accent-soft:   #fed7aa;   /* tint, rarely used (eyebrow on light only) */
+  --accent-blue:   #0072BB;   /* blue — section accent (facilities, history) */
 
   /* ----- Color: neutrals ------------------------------------------------ */
   --slate-950: #0f172a;

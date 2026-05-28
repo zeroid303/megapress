@@ -290,7 +290,7 @@ window.MP_I18N = {
       title: '메가프레스의 <em>사업 부문</em>',
       lead: "",
       cards: [
-        { name: "인쇄 사업 부문", color: "#0072BB", textColor: "#fff", body: "아날로그 산업에서 출발한 메가프레스는 고객 만족에 최선의 노력을 기울였으며, 최근 5년 동안 인쇄 산업의 변화인 디지털 방식으로 전환되는 시점에서도 최고의 품질과 디자인, 저렴한 가격, 편리한 시스템, 무료배송 등 최고의 서비스를 추구하고 있습니다." },
+        { name: "인쇄 사업 부문", color: "var(--accent-blue)", textColor: "#fff", body: "아날로그 산업에서 출발한 메가프레스는 고객 만족에 최선의 노력을 기울였으며, 최근 5년 동안 인쇄 산업의 변화인 디지털 방식으로 전환되는 시점에서도 최고의 품질과 디자인, 저렴한 가격, 편리한 시스템, 무료배송 등 최고의 서비스를 추구하고 있습니다." },
         { name: "솔루션 사업 부문", color: "#0094CC", textColor: "#fff", body: "메가프레스는 인터넷 비즈니스와 연계하여 고객 여러분들의 편익을 위하여 자동 주문 시스템을 개발하였으며, 디자인을 훨씬 손쉽게 하도록 디자인 자동 편집 소프트웨어와 기업형 자동주문 시스템을 개발·관리하여 최상의 시스템을 제공하고자 노력하고 있습니다." },
         { name: "디자인 컨설팅", color: "#ED008C", textColor: "#fff", body: "메가프레스는 개인과 기업의 디자인 컨설팅 지원을 하고 있습니다. 사업 운영에 필요한 각종 인쇄물 디자인 및 인쇄를 지원하며, 기존 인쇄물 디자인의 업그레이드, 신속한 시안 확인, 인쇄 요청, 수정 요청 등 모든 상품 디자인을 한눈에 확인하고 진행할 수 있습니다." },
         { name: "기계 장비 사업 부문", color: "#DFE069", textColor: "#1a1a1a", body: "메가프레스는 혁신적인 주문 자동화 솔루션을 개발하여 인쇄 장비와 연계된 첨단 상품을 선보였습니다. 국내는 물론 해외 시장에서도 검증받은 고품질 인쇄 IT 솔루션을 제공하며, 명함을 비롯한 다양한 인쇄 상품에 이르는 소프트웨어 및 인쇄 장비 판매를 통해 최고의 수익성과 안정성을 확보하고자 최선을 다하고 있습니다." },
@@ -630,7 +630,7 @@ window.MP_I18N = {
       title: 'Our <em>business sectors</em>',
       lead: "",
       cards: [
-        { name: "Print Business", color: "#0072BB", textColor: "#fff", body: "Starting from analog roots, MEGA PRESS has consistently devoted itself to customer satisfaction. Even as the industry shifted to digital over the past five years, we continue to pursue the highest quality, design, affordable pricing, convenient systems, and free delivery — the best service possible." },
+        { name: "Print Business", color: "var(--accent-blue)", textColor: "#fff", body: "Starting from analog roots, MEGA PRESS has consistently devoted itself to customer satisfaction. Even as the industry shifted to digital over the past five years, we continue to pursue the highest quality, design, affordable pricing, convenient systems, and free delivery — the best service possible." },
         { name: "Solution Business", color: "#0094CC", textColor: "#fff", body: "MEGA PRESS developed an automated ordering system linked to internet commerce for our customers' convenience. We continue to develop and operate auto-editing design software and enterprise-grade automated ordering systems to deliver the best possible solution." },
         { name: "Design Consulting", color: "#ED008C", textColor: "#fff", body: "MEGA PRESS supports design consulting for both individuals and enterprises. We provide all kinds of print design and printing services for business operations — upgrades for existing designs, fast proof review, print requests, and revisions — all visible and actionable at a glance." },
         { name: "Machinery Business", color: "#DFE069", textColor: "#1a1a1a", body: "MEGA PRESS has developed innovative order-automation solutions and introduced cutting-edge products tied to print equipment. We provide high-quality print IT solutions proven in both domestic and overseas markets, securing top profitability and stability through software and press equipment sales across a wide range of print products including business cards." },

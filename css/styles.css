@@ -484,7 +484,7 @@ section#about.block { padding-top: 76px; }
 }
 .about-grid--single .about-title { max-width: 18ch; }
 .about-grid .about-title { max-width: 14ch; }
-.about-grid .about-body p { margin: 0 0 24px; max-width: 50ch; font-size: 16px; line-height: 1.85; color: var(--slate-800); font-family: var(--font-body); }
+.about-grid .about-body p { margin: 0 0 24px; max-width: 50ch; font-size: 16px; line-height: 1.85; color: var(--slate-500); font-family: var(--font-body); }
 .about-grid .about-body .about-para { margin: 0 0 36px; max-width: 56ch; }
 .about-grid .about-body .about-para .about-para-label {
   font-family: var(--font-body);
@@ -521,7 +521,7 @@ section#about.block { padding-top: 76px; }
 }
 .mvv { display: flex; flex-direction: column; gap: 16px; }
 .mvv .card {
-  background: var(--bone-100);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 16px;
   padding: 32px;
 }
@@ -634,7 +634,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--slate-600);
+  color: var(--slate-500);
   margin: 0;
 }
 .press-pages {
@@ -695,7 +695,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.85;
-  color: var(--slate-700);
+  color: var(--slate-500);
   margin: 0;
   max-width: 72ch;
 }
@@ -740,7 +740,7 @@ section#about.block { padding-top: 76px; }
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--accent);
+  color: var(--accent-blue);
   font-variant-numeric: tabular-nums;
   line-height: 1;
   padding-top: 6px;
@@ -754,7 +754,7 @@ section#about.block { padding-top: 76px; }
   width: 13px;
   height: 13px;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--accent-blue);
   border: 3px solid var(--bone-50);
   z-index: 1;
 }
@@ -799,7 +799,7 @@ section#about.block { padding-top: 76px; }
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #0072BB;
+  color: var(--accent-blue);
   margin-bottom: 24px;
 }
 /* Equipment categories */
@@ -827,7 +827,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.8;
-  color: var(--slate-700);
+  color: var(--slate-500);
   margin: 0 0 16px;
 }
 .fac-cat-group + .fac-cat-group { margin-top: 12px; }
@@ -837,7 +837,7 @@ section#about.block { padding-top: 76px; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #0072BB;
+  color: var(--accent-blue);
   margin-bottom: 8px;
 }
 .fac-cat-items {
@@ -864,10 +864,9 @@ section#about.block { padding-top: 76px; }
   gap: 16px;
 }
 .fac-awards-card {
-  background: var(--bone-100);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 16px;
   padding: 32px;
-  border: 1px solid rgba(15, 23, 42, 0.04);
   min-height: 220px;
   display: flex;
   flex-direction: column;
