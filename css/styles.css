@@ -148,7 +148,6 @@ section.block .container {
 section.block.dark  { background: var(--slate-950); color: white; }
 section.block.light { background: var(--bone-50);  color: var(--slate-950); }
 .dark p, .dark .body { color: var(--slate-300); }
-.light p, .light .body { color: var(--slate-500); }
 
 /* Section title block — 제목과 첫 콘텐츠 사이 여백을 페이지마다 통일.
    기본 margin-bottom=80px이라 lead가 없어도 충분한 여백 확보.
@@ -381,8 +380,8 @@ section#about.block { padding-top: 76px; }
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-/* .about-hero 컨텍스트로 묶어 specificity를 올린다. universal white theme의
-   `.light p { color: #4a4a4a; }`(아래쪽 1191 라인)에 덮이는 걸 방지 — sub가
+/* .about-hero 컨텍스트로 묶어 specificity를 올린다. 파일 하단의
+   `.light p { color: var(--fg-2); }` 오버라이드에 덮이는 걸 방지 — sub가
    <p> 태그라 그대로 두면 사진 위에서 어두운 회색으로 깔린다. */
 .about-hero .about-hero-sub {
   font-family: var(--font-body);
@@ -484,18 +483,7 @@ section#about.block { padding-top: 76px; }
 }
 .about-grid--single .about-title { max-width: 18ch; }
 .about-grid .about-title { max-width: 14ch; }
-.about-grid .about-body p { margin: 0 0 24px; max-width: 50ch; font-size: 16px; line-height: 1.85; color: var(--slate-500); font-family: var(--font-body); }
-.about-grid .about-body .about-para { margin: 0 0 36px; max-width: 56ch; }
-.about-grid .about-body .about-para .about-para-label {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-.about-grid .about-body .about-para p { margin: 0; }
+.about-grid .about-body p { margin: 0 0 24px; max-width: 50ch; font-size: 16px; line-height: 1.85; color: var(--fg-2); font-family: var(--font-body); }
 .about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -534,7 +522,7 @@ section#about.block { padding-top: 76px; }
 .mvv .card.kr h4 { font-family: var(--font-body); font-weight: 700; }
 .mvv .card p {
   font-family: var(--font-body);
-  font-size: 14px; line-height: 1.75; color: var(--slate-500); margin: 0;
+  font-size: 14px; line-height: 1.75; color: var(--fg-2); margin: 0;
 }
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -566,7 +554,7 @@ section#about.block { padding-top: 76px; }
 .philosophy-body {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--slate-500);
+  color: var(--fg-2);
   margin: 0;
 }
 @media (max-width: 900px) {
@@ -578,7 +566,7 @@ section#about.block { padding-top: 76px; }
 .press-empty {
   font-family: var(--font-body);
   font-size: 15px;
-  color: var(--slate-500);
+  color: var(--fg-2);
   padding: 60px 0;
   text-align: center;
 }
@@ -634,7 +622,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--slate-500);
+  color: var(--fg-2);
   margin: 0;
 }
 .press-pages {
@@ -695,7 +683,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.85;
-  color: var(--slate-500);
+  color: var(--fg-2);
   margin: 0;
   max-width: 72ch;
 }
@@ -767,7 +755,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.75;
-  color: var(--slate-500);
+  color: var(--fg-2);
   position: relative;
   padding-left: 16px;
 }
@@ -779,7 +767,7 @@ section#about.block { padding-top: 76px; }
   width: 4px;
   height: 4px;
   border-radius: 999px;
-  background: var(--slate-500);
+  background: var(--fg-2);
 }
 @media (max-width: 640px) {
   .timeline::before { left: 6px; }
@@ -827,7 +815,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.8;
-  color: var(--slate-500);
+  color: var(--fg-2);
   margin: 0 0 16px;
 }
 .fac-cat-group + .fac-cat-group { margin-top: 12px; }
@@ -882,7 +870,7 @@ section#about.block { padding-top: 76px; }
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.7;
-  color: var(--slate-500);
+  color: var(--fg-2);
   margin: 0 0 20px;
 }
 .fac-awards-list {
@@ -942,8 +930,6 @@ section#about.block { padding-top: 76px; }
 .contact-item .lbl { font-size: 12px; color: var(--slate-400); margin-bottom: 2px; }
 .contact-item .val { font-size: 15px; color: white; font-weight: 500; }
 
-.contact-form, .contact-form * { display: none !important; }
-
 /* Map card next to the contact info */
 .map-card {
   position: relative;
@@ -979,54 +965,7 @@ section#about.block { padding-top: 76px; }
 }
 .map-link:hover { background: rgba(15, 23, 42, 0.95); }
 .map-link svg { display: block; }
-.contact-form .field {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 18px 20px;
-  color: white;
-  font-size: 15px;
-  font-family: var(--font-body);
-  outline: none;
-  transition: border-color var(--dur-fast) var(--ease-out);
-}
-.contact-form .field:focus { border-color: rgba(255,255,255,0.2); }
-.contact-form .field::placeholder { color: rgba(255,255,255,0.4); }
-.contact-form textarea.field { min-height: 140px; resize: vertical; }
-.contact-form .submit {
-  background: var(--navy-700);
-  color: white;
-  border: 0;
-  padding: 18px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 8px;
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  transition: background var(--dur-fast) var(--ease-out);
-}
-.contact-form .submit:hover { background: var(--navy-800); }
-.contact-form .submit .send-icon { transition: transform var(--dur-base) var(--ease-out); }
-.contact-form .submit:hover .send-icon { transform: translate(2px, -2px); }
 @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-
-/* Toast */
-.toast {
-  position: fixed;
-  bottom: 32px; left: 50%; transform: translateX(-50%) translateY(60px);
-  background: var(--bone-50);
-  color: var(--slate-950);
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-size: 14px;
-  box-shadow: var(--shadow-3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
-  z-index: 100;
-}
-.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* Footer — 법적 고지 정보를 3구역으로 구분.
    1) identity: 회사·대표·사업자·통신판매업 등 신원 정보 (인라인 dot-separated)
@@ -1101,7 +1040,7 @@ section.block, section.block.dark, section.block.light {
   background: #ffffff;
   color: #000000;
 }
-.dark p, .dark .body, .light p, .light .body { color: #4a4a4a; }
+.dark p, .dark .body, .light p, .light .body { color: var(--fg-2); }
 
 
 /* Work section — light surfaces and dark text */
@@ -1157,5 +1096,3 @@ image-slot.work-image, .work-image {
 }
 .map-link:hover { background: #ffffff; }
 
-/* Toast */
-.toast { background: #000000; color: #ffffff; }
