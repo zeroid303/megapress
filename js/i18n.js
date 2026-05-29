@@ -57,7 +57,7 @@ window.MP_I18N = {
         images: [
           { src: "assets/images/printcenter-1.jpg", position: "center top",    caption: "메가프레스 — 1996년부터, 인쇄 혁신의 중심에서",       sub: "MEGA PRESS — At the center of print innovation since 1996." },
           { src: "assets/images/printcenter-2.jpg", position: "center center", caption: "주문은 간편하게, 제작은 신속하게, 납품은 완벽하게", sub: "Order with ease. Produce at speed. Deliver in perfection." },
-          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
+          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From estimate to delivery, in one workflow." },
         ],
       },
       affiliatesLabel: "메가프레스 계열사",
@@ -372,7 +372,7 @@ window.MP_I18N = {
           num: "02",
           sector: "STRENGTH · MANUFACTURING",
           imgPlaceholder: "Drop a manufacturing photo here",
-          title: "Quote to delivery, one workflow.",
+          title: "Estimate to delivery, one workflow.",
           desc: "Offset and digital printing through finishing and packaging — every process is owned in-house. What used to be split across vendors closes inside one company.",
           stats: [
             { value: "28", label: "Simultaneous SKUs" },
@@ -397,7 +397,7 @@ window.MP_I18N = {
         images: [
           { src: "assets/images/printcenter-1.jpg", position: "center top",    caption: "메가프레스 — 1996년부터, 인쇄 혁신의 중심에서",       sub: "MEGA PRESS — At the center of print innovation since 1996." },
           { src: "assets/images/printcenter-2.jpg", position: "center center", caption: "주문은 간편하게, 제작은 신속하게, 납품은 완벽하게", sub: "Order with ease. Produce at speed. Deliver in perfection." },
-          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From quote to delivery, in one workflow." },
+          { src: "assets/images/printcenter-3.jpg", position: "center top",    caption: "견적부터 배송까지, 하나의 워크플로우로",           sub: "From estimate to delivery, in one workflow." },
         ],
       },
       affiliatesLabel: "Our affiliated brands",
